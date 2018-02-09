@@ -5,15 +5,60 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="./assets/css/reset.css">
+	<link rel="stylesheet" href="./assets/css/bootstrap.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
 	<title>Crystal Collector</title>
 </head>
 <body>
 	<script
-  src="http://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-	crossorigin="anonymous"></script>
+	src="./assets/js/jquery-3.3.1.min.js"></script>
 	
+	<div class="container">
 
+		<div class="jumbotron">
+			<!-- header at the top -->
+			<h1>Crystal Collector!</h1>
+			<!-- then come instructions -->
+
+
+		<!-- random number div and wins/losses div -->
+<div id="randomNumber"></div>
+<div><h2 id="wins"></h2>
+<h2 id="loses"></h2></div>
+
+		<!-- gems -->
+		<div class="row">
+			<div class="col-md-1 col-md-offset-1 gem" value="gem1">
+				<img src="assets/images/gem1.png" class="img-responsive" alt="Gem1">
+			</div>
+			<div class="col-md-1 col-md-offset-1 gem" value="gem2">
+				<img src="assets/images/gem2.png" class="img-responsive" alt="Gem2">
+			</div>
+			<div class="col-md-1 col-md-offset-1 gem" value="gem3">
+				<img src="assets/images/gem3.png" class="img-responsive" alt="Gem3">
+			</div>
+			<div class="col-md-1 col-md-offset-1 gem" value="gem4">
+				<img src="assets/images/gem4.png" class="img-responsive" alt="Gem4">
+			</div>
+		</div>
+		
+		<!-- score text row -->
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1 scoreDiv">
+				<p>Your total score is:</p>
+			</div>
+		</div>
+
+		<!-- user score div -->
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1 scoreDiv">
+				<h2 id="userScore">score</h2>
+			</div>
+		</div>
+	
+	<!-- now end the container	 -->
+	</div>
+<script src="./assets//js/bootstrap.js"></script>
+<script src="./assets/js/game.js"></script>
 </body>
 </html>
