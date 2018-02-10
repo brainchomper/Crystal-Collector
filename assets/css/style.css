@@ -1,0 +1,13 @@
+body {
+	background-image: url("../images/carbon_fibre_@2X.png");
+}
+h1,h2,h3,h4,h5 {
+	color: whitesmoke;
+}
+p {
+	color: black;
+}
+.crystalRow {
+	width: 80%;
+	margin: auto;
+}

@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Crystals Collector">
-	<title>Week 4 - Crystals Collector</title>
+	<title>Week 4 - Crystal Collector</title>
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -14,50 +14,60 @@
 
 <body>
 
-	<div class="container">
+	<div class="container-fluid">
 
 		<div class="jumbotron">
 			<!-- header at the top -->
-			<h1>Crystals Collector!</h1>
+			<h1 align="center">Crystal Collector!</h1>
 			<!-- then come instructions -->
+			<div class="col-sm-3">
+			</div>
+			<div class="col-sm-3" align="center">
+				<p id="winsCounter">Wins: </p>
+			</div>
+			<div class="col-sm-3" align="center">
+				<p id="lossesCounter">losses: </p>
+			</div>
+			<div class="col-sm-3">
+			</div>
 		</div>
 
 		<!-- random number div and wins/losses div -->
+
 		<div class="row">
-			<div class="col-md-3 randomNumberDiv">
-				<h2 id="randomNumber">random#</h2>
+			<div class="col-sm-3">
+
 			</div>
-			<div class="col-md-3 winsLossesDiv">
-				<p id="winsCounter">Wins: </p>
-				<p id="lossesCounter">losses: </p>
+			<div class="col-sm-3" align="center">
+				<h5>Number To Guess:</h5>
+				<h2 id="randomNumber"></h2>
 			</div>
-		</div>
-		<!-- score text row -->
-		<div class="row">
-			<div class="col-md-3 col-md-offset-1 scoreDiv">
-				<p>Your total score is:</p>
-			</div>
-		</div>
-		<!-- user score div -->
-		<div class="row">
-			<div class="col-md-3 col-md-offset-1 scoreDiv">
+			<div class="col-sm-3" align="center">
+				<h5>Current Score:</h5>
 				<h2 id="userScore">score</h2>
 			</div>
+			<div class="col-sm-3"></div>
 		</div>
 		<!-- crystals -->
-		<div class="row">
-			<div class="col-md-3 crystal" value="crystal1">
+		<div class="row crystalRow" align="center">
+				<div class="col-sm-2"></div>
+			<div class="col-sm-4 crystal" value="crystal1">
 				<img src="assets/images/crystal1.png" alt="crystal1">
 			</div>
-			<div class="col-md-3 crystal" value="crystal2">
+			<div class="col-sm-4 crystal" value="crystal2">
 				<img src="assets/images/crystal2.png" alt="crystal2">
 			</div>
-			<div class="col-md-3 crystal" value="crystal3">
+			<div class="col-sm-2"></div>
+		</div>
+		<div class="row crystalRow" align="center">
+				<div class="col-sm-2"></div>
+			<div class="col-sm-4 crystal" value="crystal3">
 				<img src="assets/images/crystal3.png" alt="crystal3">
 			</div>
-			<div class="col-md-3 crystal" value="crystal4">
+			<div class="col-sm-4 crystal" value="crystal4">
 				<img src="assets/images/crystal4.png" alt="crystal4">
 			</div>
+			<div class="col-sm-2"></div>
 		</div>
 
 		<!-- now end the container	 -->
