@@ -21,7 +21,7 @@ $(document).ready(function () {
 		$('#winsCounter').html("Wins: " + wins);
 		$('#lossesCounter').html("Losses: " + losses);
 		$('#randomNumber').html(randComputer);
-		$('userScore').html("Score: " + usrScore);
+		$('#userScore').html("Score: " + usrScore);
 		console.log("computer value " + randComputer);
 		console.log("crystal1 val " + crystalVal1);
 		console.log("crystal2 val " + crystalVal2);
@@ -33,7 +33,7 @@ $(document).ready(function () {
 
 	function winOrLose() {
 		// check if user has lost
-		if (wins > randComputer) {
+		if (usrScore > randComputer) {
 			losses++;
 			console.log("User Lost");
 			startGame();
@@ -42,6 +42,7 @@ $(document).ready(function () {
 		// check if user has won
 		if (usrScore == randComputer) {
 			wins++;
+
 			console.log("User Won");
 			startGame();
 		}
@@ -52,16 +53,20 @@ $(document).ready(function () {
 	$(".crystal").on("click", function () {
 		var clicked = $(this).attr("value");
 		// console.log(clicked)
-		if (clicked == crystal1) {
+		if (clicked == "crystal1") {
 			usrScore += crystalVal1;
-		} else if (clicked == crystal2) {
+		} else if (clicked == "crystal2") {
 			usrScore += crystalVal2;
-		} else if (clicked == crystal3) {
+		} else if (clicked == "crystal3") {
 			usrScore += crystalVal3;
-		} else if (clicked == crystal4) {
+		} else if (clicked == "crystal4") {
 			usrScore += crystalVal4;
 		}
-	})
+
+		$("#userScore").html(usrScore);
+
+		winOrLose();
+	});
 	//End Main Game
 
 });
