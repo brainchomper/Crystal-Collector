@@ -48,6 +48,13 @@ function winOrLose() {
 }
 //end winOrLose
 
+//Main Game
+$(".crystal").on("click", function(){
+	var clicked = $(this).attr("value");
+	console.log(clicked)
+})
+//End Main Game
+
 });
 
 // When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
