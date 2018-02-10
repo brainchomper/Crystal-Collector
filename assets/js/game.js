@@ -1,24 +1,54 @@
-// Global Variables
+$(document).ready(function() {
+	// Global Variables
 var crystalVal1, crystalVal2, crystalVal3, crystalVal4;
 var wins = 0;
-var loses = 0;
+var losses = 0;
 var randComputer;
 // counts user score
 var usrScore;
 
 //Functions
+startGame();
+function startGame () {
+// random number between 25 & 80
 
-function startGame ()
-//randome number between 25 & 80
 randComputer = 25 + Math.floor(Math.random() * 55);
-ran
 crystalVal1 = 1 + Math.floor(Math.random() * 10);
-crystalVAl2 = 1 + Math.floor(Math.random() * 10);
+crystalVal2 = 1 + Math.floor(Math.random() * 10);;
 crystalVal3 = 1 + Math.floor(Math.random() * 10);
 crystalVal4 = 1 + Math.floor(Math.random() * 10);
 usrScore = 0;
+$('#winsCounter').html("Wins: " + wins);
+$('#lossesCounter').html("Losses: " + losses);
+$('#randomNumber').html(randComputer);
+$('userScore').html("Score: " + usrScore);
+console.log("computer value " + randComputer);
+console.log("crystal1 val " + crystalVal1);
+console.log("crystal2 val " + crystalVal2);
+console.log("crystal3 val " + crystalVal3);
+console.log("crystal4 val " + crystalVal4);
+console.log("user score " + usrScore);
+}
+//end startGame
 
+function winOrLose() {
+	// check if user has lost
+	if (wins > randComputer) {
+		losses++;
+		console.log("User Lost");
+		startGame();
+	}
 
+	// check if user has won
+	if (usrScore == randComputer) {
+		wins++;
+		console.log("User Won");
+		startGame();
+	}
+}
+//end winOrLose
+
+});
 
 // When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
 
@@ -33,4 +63,4 @@ usrScore = 0;
 
 // When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
 
-//The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
+//The app should show the number of games the player wins and loses. To that end, do norefresh the page as a means to restart the game
